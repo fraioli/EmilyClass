@@ -9,9 +9,10 @@ int main(int argc, const char **argv) {
 	char digit = argv[1][0];
 
 	/*
-	Write code here. Convert the character to an integer and then add five to it.
+	Write code here. Convert the character to an integer and then add one to it.
 	Print it out at the end.
 	*/
+    digit = digit - 47;
 
 	printf("The digit is %d\n", digit);
 	return 0;
