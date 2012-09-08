@@ -2,7 +2,11 @@
 
 // Returns 'base' to the 'power' power
 // 	ex: exp(5, 2) == 25
-int exp(int base, int power) {
+int exponential(int base, int power) {
+    while (power > 0) {
+        base = base * base;
+        power--;
+    }
 	// Write it out!
 	return 0;
 }
@@ -22,9 +26,13 @@ int main(int argc, const char **argv) {
 	while (curr != '\0') {
 		// During every loop, 'curr' will be the next character of the string
 		// that represents the number.
+        decimalNumber = decimalNumber * 10;
+        decimalNumber += curr - 48;
 		
 		curr = number[++i];
 	}
+    
+    decimalNumber++;
 
 	printf("The number is %d\n", decimalNumber);
 	return 0;
