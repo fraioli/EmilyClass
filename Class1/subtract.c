@@ -23,6 +23,7 @@ int main(int argc, const char **argv) {
 	 Write code here. Take the difference of the first and second number (firstNumber - secondNumber),
 	 and set 'difference' to that value.
 	*/
+    difference = firstNumber - secondNumber;
 
 	printf("The difference is %d\n", difference);
 	return 0;
