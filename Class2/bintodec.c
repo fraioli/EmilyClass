@@ -10,6 +10,7 @@ int main(int argc, const char **argv) {
 	const char *binaryRep = argv[1];
 	int binaryRepLength = strlen(binaryRep);
 	int decimalRep = 0;
+    
 
 	/*
 	Convert the binary representation string to its corresponding decimal number.
@@ -25,6 +26,22 @@ int main(int argc, const char **argv) {
 		    =     =     =     =     =
 			16 +  0  +  4  +  0  +  1  = 21			
 	*/
+    
+    int i = 0;
+    int tempNumber = 0;
+    while (i < binaryRepLength) {
+        tempNumber = binaryRep[i] - 48;
+        int base = 1;
+        int j = 0;
+        while (j < (binaryRepLength - 1 - i)) {
+            base = base * 2;
+            j++;
+        }
+        tempNumber = tempNumber * base;
+        decimalRep = decimalRep + tempNumber;
+        i++;
+    }
+    
 
 	printf("The decimal representation of %s is %d\n", binaryRep, decimalRep);
 	return 0;
