@@ -93,7 +93,7 @@ int xor(int a, int b) {
 	return answer;
 }
 
-int main(int argc, const char **argv) {
+int bitmaskRun(int argc, const char **argv) {
 	if (argc != 3) {
 		fprintf(stderr, "Usage: bitmask <num1> <num2>\n");
 		return 1;

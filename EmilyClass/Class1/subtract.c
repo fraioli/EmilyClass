@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-int main(int argc, const char **argv) {
+int subtractRun(int argc, const char **argv) {
 	
 	if (argc != 3) {
 		fprintf(stderr, "Usage: subtract <digit1> <digit2>\n");

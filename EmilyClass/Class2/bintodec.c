@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, const char **argv) {	
+int bintodecRun(int argc, const char **argv) {
 	if (argc != 2) {
 		fprintf(stderr, "Usage: bintodec <binary number>\n");
 		return 1;

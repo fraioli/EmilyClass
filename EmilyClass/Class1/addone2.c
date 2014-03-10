@@ -11,7 +11,7 @@ int exponential(int base, int power) {
 	return 0;
 }
 
-int main(int argc, const char **argv) {
+int addone2Run(int argc, const char **argv) {
 	if (argc != 2) {
 		fprintf(stderr, "Usage: addone <digit>\n");
 		return 1;
