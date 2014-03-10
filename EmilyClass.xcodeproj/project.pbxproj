@@ -7,11 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C4FC2CB18CD740F00021056 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4FC2CA18CD740F00021056 /* XCTest.framework */; };
+		7C4FC2D118CD740F00021056 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7C4FC2CF18CD740F00021056 /* InfoPlist.strings */; };
+		7C4FC2DB18CD744F00021056 /* EJCHashTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */; };
+		7C4FC2E918CD78D900021056 /* EJCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8296418CD70140075A026 /* EJCHashTable.c */; };
 		7CB8295618CD6FC30075A026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB8295518CD6FC30075A026 /* Foundation.framework */; };
 		7CB8295D18CD6FC30075A026 /* EmilyClass.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CB8295C18CD6FC30075A026 /* EmilyClass.1 */; };
 		7CB8296A18CD72AF0075A026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8295818CD6FC30075A026 /* main.m */; };
 		7CB8296B18CD72B40075A026 /* EJCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8296418CD70140075A026 /* EJCHashTable.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7C4FC2D518CD740F00021056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CB8294A18CD6FC30075A026 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CB8295118CD6FC30075A026;
+			remoteInfo = EmilyClass;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		7CB8295018CD6FC30075A026 /* CopyFiles */ = {
@@ -27,6 +41,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7C4FC2C918CD740F00021056 /* EmilyClassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmilyClassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C4FC2CA18CD740F00021056 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7C4FC2CE18CD740F00021056 /* EmilyClassTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EmilyClassTests-Info.plist"; sourceTree = "<group>"; };
+		7C4FC2D018CD740F00021056 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7C4FC2D418CD740F00021056 /* EmilyClassTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EmilyClassTests-Prefix.pch"; sourceTree = "<group>"; };
+		7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJCHashTableTests.m; sourceTree = "<group>"; };
 		7CB8295218CD6FC30075A026 /* EmilyClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EmilyClass; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB8295518CD6FC30075A026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CB8295818CD6FC30075A026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -37,6 +57,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7C4FC2C618CD740F00021056 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4FC2CB18CD740F00021056 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7CB8294F18CD6FC30075A026 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -48,10 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C4FC2CC18CD740F00021056 /* EmilyClassTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */,
+				7C4FC2CD18CD740F00021056 /* Supporting Files */,
+			);
+			path = EmilyClassTests;
+			sourceTree = "<group>";
+		};
+		7C4FC2CD18CD740F00021056 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C4FC2CE18CD740F00021056 /* EmilyClassTests-Info.plist */,
+				7C4FC2CF18CD740F00021056 /* InfoPlist.strings */,
+				7C4FC2D418CD740F00021056 /* EmilyClassTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7CB8294918CD6FC30075A026 = {
 			isa = PBXGroup;
 			children = (
 				7CB8295718CD6FC30075A026 /* EmilyClass */,
+				7C4FC2CC18CD740F00021056 /* EmilyClassTests */,
 				7CB8295418CD6FC30075A026 /* Frameworks */,
 				7CB8295318CD6FC30075A026 /* Products */,
 			);
@@ -61,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				7CB8295218CD6FC30075A026 /* EmilyClass */,
+				7C4FC2C918CD740F00021056 /* EmilyClassTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				7CB8295518CD6FC30075A026 /* Foundation.framework */,
+				7C4FC2CA18CD740F00021056 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -104,6 +154,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7C4FC2C818CD740F00021056 /* EmilyClassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C4FC2D918CD740F00021056 /* Build configuration list for PBXNativeTarget "EmilyClassTests" */;
+			buildPhases = (
+				7C4FC2C518CD740F00021056 /* Sources */,
+				7C4FC2C618CD740F00021056 /* Frameworks */,
+				7C4FC2C718CD740F00021056 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C4FC2D618CD740F00021056 /* PBXTargetDependency */,
+			);
+			name = EmilyClassTests;
+			productName = "EmilyClass Tests";
+			productReference = 7C4FC2C918CD740F00021056 /* EmilyClassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7CB8295118CD6FC30075A026 /* EmilyClass */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CB8296018CD6FC30075A026 /* Build configuration list for PBXNativeTarget "EmilyClass" */;
@@ -129,6 +197,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Curly House Inc.";
+				TargetAttributes = {
+					7C4FC2C818CD740F00021056 = {
+						TestTargetID = 7CB8295118CD6FC30075A026;
+					};
+				};
 			};
 			buildConfigurationList = 7CB8294D18CD6FC30075A026 /* Build configuration list for PBXProject "EmilyClass" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -143,11 +216,32 @@
 			projectRoot = "";
 			targets = (
 				7CB8295118CD6FC30075A026 /* EmilyClass */,
+				7C4FC2C818CD740F00021056 /* EmilyClassTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		7C4FC2C718CD740F00021056 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4FC2D118CD740F00021056 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		7C4FC2C518CD740F00021056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C4FC2E918CD78D900021056 /* EJCHashTable.c in Sources */,
+				7C4FC2DB18CD744F00021056 /* EJCHashTableTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7CB8294E18CD6FC30075A026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,7 +253,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7C4FC2D618CD740F00021056 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CB8295118CD6FC30075A026 /* EmilyClass */;
+			targetProxy = 7C4FC2D518CD740F00021056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7C4FC2CF18CD740F00021056 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C4FC2D018CD740F00021056 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		7C4FC2D718CD740F00021056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmilyClassTests/EmilyClassTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EmilyClassTests/EmilyClassTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7C4FC2D818CD740F00021056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EmilyClassTests/EmilyClassTests-Prefix.pch";
+				INFOPLIST_FILE = "EmilyClassTests/EmilyClassTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		7CB8295E18CD6FC30075A026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,6 +396,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7C4FC2D918CD740F00021056 /* Build configuration list for PBXNativeTarget "EmilyClassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C4FC2D718CD740F00021056 /* Debug */,
+				7C4FC2D818CD740F00021056 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7CB8294D18CD6FC30075A026 /* Build configuration list for PBXProject "EmilyClass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
