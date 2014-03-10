@@ -12,9 +12,9 @@
 typedef const void * EJCHashTableRef;
 
 EJCHashTableRef EJCHashTableNew();
-void EJCHashTableFree(EJCHashTableRef hashTable);
-void EJCHashTableAdd(EJCHashTableRef hashTable, char *key, void *value);
-void EJCHashTableRemove(EJCHashTableRef hashTable, char *key);
-void * EJCHashTableGetValue(EJCHashTableRef hashTable, char *key);
+void EJCHashTableFree(EJCHashTableRef hashTableRef);
+void EJCHashTableAdd(EJCHashTableRef hashTableRef, char *key, void *value);
+void EJCHashTableRemove(EJCHashTableRef hashTableRef, char *key);
+void * EJCHashTableGetValue(EJCHashTableRef hashTableRef, char *key);
 
 #endif

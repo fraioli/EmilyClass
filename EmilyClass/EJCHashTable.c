@@ -6,28 +6,29 @@
 //  Copyright (c) 2014 Curly House Inc. All rights reserved.
 //
 
-#include <stdio.h>
+#include <stdlib.h>
 #include "EJCHashTable.h"
 
-struct EJCHashTableRef {
+struct EJCHashTable {
 };
 
 EJCHashTableRef EJCHashTableNew() {
     return NULL;
 }
 
-void EJCHashTableFree(EJCHashTableRef hashTable) {
-    
+void EJCHashTableFree(EJCHashTableRef hashTableRef) {
+    struct EJCHashTable *hashTable = (struct EJCHashTable *)hashTableRef;
 }
 
-void EJCHashTableAdd(EJCHashTableRef hashTable, char *key, void *value) {
-    
+void EJCHashTableAdd(EJCHashTableRef hashTableRef, char *key, void *value) {
+    struct EJCHashTable *hashTable = (struct EJCHashTable *)hashTableRef;
 }
 
-void EJCHashTableRemove(EJCHashTableRef hashTable, char *key) {
-    
+void EJCHashTableRemove(EJCHashTableRef hashTableRef, char *key) {
+    struct EJCHashTable *hashTable = (struct EJCHashTable *)hashTableRef;
 }
 
-void * EJCHashTableGetValue(EJCHashTableRef hashTable, char *key) {
+void * EJCHashTableGetValue(EJCHashTableRef hashTableRef, char *key) {
+    struct EJCHashTable *hashTable = (struct EJCHashTable *)hashTableRef;
     return NULL;
 }
