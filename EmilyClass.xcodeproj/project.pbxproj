@@ -12,6 +12,8 @@
 		7C4FC2DB18CD744F00021056 /* EJCHashTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */; };
 		7C4FC2E918CD78D900021056 /* EJCHashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8296418CD70140075A026 /* EJCHashTable.c */; };
 		7C4FC2EB18CEDA2D00021056 /* EJCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */; };
+		7C4FC2EE18CEDBAF00021056 /* EJCLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */; };
+		7C4FC2EF18CEDF0900021056 /* EJCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */; };
 		7CB8295618CD6FC30075A026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB8295518CD6FC30075A026 /* Foundation.framework */; };
 		7CB8295D18CD6FC30075A026 /* EmilyClass.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CB8295C18CD6FC30075A026 /* EmilyClass.1 */; };
 		7CB8296A18CD72AF0075A026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8295818CD6FC30075A026 /* main.m */; };
@@ -55,6 +57,7 @@
 		7C4FC2E518CD761A00021056 /* bitmask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bitmask.c; path = Class2/bitmask.c; sourceTree = "<group>"; };
 		7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EJCLinkedList.c; sourceTree = "<group>"; };
 		7C4FC2EC18CEDA3C00021056 /* EJCLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EJCLinkedList.h; sourceTree = "<group>"; };
+		7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJCLinkedListTests.m; sourceTree = "<group>"; };
 		7CB8295218CD6FC30075A026 /* EmilyClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EmilyClass; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB8295518CD6FC30075A026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CB8295818CD6FC30075A026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */,
+				7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */,
 				7C4FC2CD18CD740F00021056 /* Supporting Files */,
 			);
 			path = EmilyClassTests;
@@ -269,7 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C4FC2E918CD78D900021056 /* EJCHashTable.c in Sources */,
+				7C4FC2EF18CEDF0900021056 /* EJCLinkedList.c in Sources */,
 				7C4FC2DB18CD744F00021056 /* EJCHashTableTests.m in Sources */,
+				7C4FC2EE18CEDBAF00021056 /* EJCLinkedListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
