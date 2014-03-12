@@ -65,7 +65,7 @@
     EJCLinkedListRemove(linkedList, "value4");
     
     
-    EJCLinkedListIteratorRef iterator = EJCLinkedListGetIterator(linkedList);
+    EJCLinkedListIteratorRef iterator = EJCLinkedListIteratorCopy(linkedList);
     char *value;
     char *valueShouldBe;
     unsigned int index = 0;
@@ -78,6 +78,16 @@
     ITERATOR_CHECK(NULL)
     ITERATOR_CHECK(NULL)
 
+    iterator = EJCLinkedListIteratorCopy(linkedList);
+    index = 0;
+    ITERATOR_CHECK("value2")
+    ITERATOR_CHECK("value3")
+    ITERATOR_CHECK("value6")
+    ITERATOR_CHECK("value7")
+    ITERATOR_CHECK("value9")
+    ITERATOR_CHECK(NULL)
+    ITERATOR_CHECK(NULL)
+    
     EJCLinkedListFree(linkedList);
 }
 

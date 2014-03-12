@@ -17,7 +17,8 @@ void EJCLinkedListFree(EJCLinkedListRef linkedListRef);
 void EJCLinkedListAdd(EJCLinkedListRef linkedListRef, void *value);
 void EJCLinkedListRemove(EJCLinkedListRef linkedListRef, void *value);
 
-EJCLinkedListIteratorRef EJCLinkedListGetIterator(EJCLinkedListRef linkedListRef);
+EJCLinkedListIteratorRef EJCLinkedListIteratorCopy(EJCLinkedListRef linkedListRef);
+void EJCLinkedListIteratorFree(EJCLinkedListIteratorRef linkedListIteratorRef);
 void * EJCLinkedListIteratorGetNextValue(EJCLinkedListIteratorRef linkedListIteratorRef);
 
 #endif

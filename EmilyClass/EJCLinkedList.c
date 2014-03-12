@@ -28,9 +28,12 @@ void EJCLinkedListRemove(EJCLinkedListRef linkedListRef, void *value) {
     struct EJCLinkedList *linkedList = (struct EJCLinkedList *)linkedListRef;
 }
 
-EJCLinkedListIteratorRef EJCLinkedListGetIterator(EJCLinkedListRef linkedListRef) {
+EJCLinkedListIteratorRef EJCLinkedListIteratorCopy(EJCLinkedListRef linkedListRef) {
     struct EJCLinkedList *linkedList = (struct EJCLinkedList *)linkedListRef;
     return NULL;
+}
+
+void EJCLinkedListIteratorFree(EJCLinkedListIteratorRef linkedListIteratorRef) {
 }
 
 void * EJCLinkedListIteratorGetNextValue(EJCLinkedListIteratorRef linkedListIteratorRef) {
