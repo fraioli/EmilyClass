@@ -53,6 +53,24 @@
     EJCHashTableFree(hashTable);
 }
 
+- (void)testAddOverwrite {
+    EJCHashTableRef hashTable = EJCHashTableNew();
+    EJCHashTableAdd(hashTable, "key1", "value1");
+    EJCHashTableAdd(hashTable, "key1", "value2");
+    EJCHashTableRemove(hashTable, "key1");
+    EJCHashTableAdd(hashTable, "key1", "value3");
+    EJCHashTableAdd(hashTable, "key1", "value4");
+    
+    char *value1 = EJCHashTableGetValue(hashTable, "key1");
+    if (value1 == NULL) {
+        XCTFail(@"Could not find value for 'key1'");
+    } else {
+        XCTAssert(strcmp(value1, "value4") == 0, @"Value for 'key1' should have been 'value4' but was '%s'", value1);
+    }
+    
+    EJCHashTableFree(hashTable);
+}
+
 - (void)testComplexAddAndRemove {
     EJCHashTableRef hashTable = EJCHashTableNew();
 
