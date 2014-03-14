@@ -24,10 +24,6 @@ void EJCLinkedListAdd(EJCLinkedListRef linkedListRef, void *value) {
     struct EJCLinkedList *linkedList = (struct EJCLinkedList *)linkedListRef;
 }
 
-void EJCLinkedListRemove(EJCLinkedListRef linkedListRef, void *value) {
-    struct EJCLinkedList *linkedList = (struct EJCLinkedList *)linkedListRef;
-}
-
 EJCLinkedListIteratorRef EJCLinkedListIteratorCopy(EJCLinkedListRef linkedListRef) {
     struct EJCLinkedList *linkedList = (struct EJCLinkedList *)linkedListRef;
     return NULL;
@@ -40,3 +36,5 @@ void * EJCLinkedListIteratorGetNextValue(EJCLinkedListIteratorRef linkedListIter
     return NULL;
 }
 
+void EJCLinkedListIteratorRemoveCurrent(EJCLinkedListIteratorRef linkedListIteratorRef) {
+}

@@ -46,15 +46,6 @@ void EJCLinkedListFree(EJCLinkedListRef linkedListRef);
 void EJCLinkedListAdd(EJCLinkedListRef linkedListRef, void *value);
 
 /*
- EJCLinkedListRemove()
-    @abstract Removes a value from the linked list. If the value can't be found, the list is unchanged.
-    @parameter linkedListRef A EJCLinkedListRef that was initialized with EJCLinkedListNew().
-    @parameter value The pointer that should be removed. This pointer must be identical to the one added with EJCLinkedListAdd(). If multiple elements exist that are identical to value, the first one is removed.
-    @runtime O(n)
- */
-void EJCLinkedListRemove(EJCLinkedListRef linkedListRef, void *value);
-
-/*
  EJCLinkedListIteratorCopy()
     @abstract Creates a new EJCLinkedListIterator to be used with iterating the linked list.
     @parameter linkedListRef A EJCLinkedListRef that was initialized with EJCLinkedListNew().
@@ -77,5 +68,13 @@ void EJCLinkedListIteratorFree(EJCLinkedListIteratorRef linkedListIteratorRef);
     @runtime O(1)
  */
 void * EJCLinkedListIteratorGetNextValue(EJCLinkedListIteratorRef linkedListIteratorRef);
+
+/*
+ EJCLinkedListIteratorRemoveCurrent()
+ @abstract Removes a value from the linked list that the supplied iterator points to. Attempting to remove after initializing an iterator or immediately removing a value without calling EJCLinkedListIteratorGetNextValue() removes nothing.
+ @parameter linkedListIteratorRef The reference to the linkedListIterator that currently points to the value that you want to remove.
+ @runtime O(1)
+ */
+void EJCLinkedListIteratorRemoveCurrent(EJCLinkedListIteratorRef linkedListIteratorRef);
 
 #endif
