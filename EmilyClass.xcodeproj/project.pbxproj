@@ -14,6 +14,9 @@
 		7C4FC2EB18CEDA2D00021056 /* EJCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */; };
 		7C4FC2EE18CEDBAF00021056 /* EJCLinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */; };
 		7C4FC2EF18CEDF0900021056 /* EJCLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */; };
+		7C88091218D6C669006D4274 /* EJCInterviewQuestionsArrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C88091118D6C669006D4274 /* EJCInterviewQuestionsArrays.m */; };
+		7C88091518D6C6B5006D4274 /* EJCArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C88091418D6C6B5006D4274 /* EJCArrays.c */; };
+		7C88091718D6CBD6006D4274 /* EJCArrays.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C88091418D6C6B5006D4274 /* EJCArrays.c */; };
 		7CB8295618CD6FC30075A026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB8295518CD6FC30075A026 /* Foundation.framework */; };
 		7CB8295D18CD6FC30075A026 /* EmilyClass.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7CB8295C18CD6FC30075A026 /* EmilyClass.1 */; };
 		7CB8296A18CD72AF0075A026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB8295818CD6FC30075A026 /* main.m */; };
@@ -58,6 +61,9 @@
 		7C4FC2EA18CEDA2D00021056 /* EJCLinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EJCLinkedList.c; sourceTree = "<group>"; };
 		7C4FC2EC18CEDA3C00021056 /* EJCLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EJCLinkedList.h; sourceTree = "<group>"; };
 		7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJCLinkedListTests.m; sourceTree = "<group>"; };
+		7C88091118D6C669006D4274 /* EJCInterviewQuestionsArrays.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EJCInterviewQuestionsArrays.m; sourceTree = "<group>"; };
+		7C88091418D6C6B5006D4274 /* EJCArrays.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EJCArrays.c; sourceTree = "<group>"; };
+		7C88091618D6C705006D4274 /* EJCArrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EJCArrays.h; sourceTree = "<group>"; };
 		7CB8295218CD6FC30075A026 /* EmilyClass */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = EmilyClass; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CB8295518CD6FC30075A026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CB8295818CD6FC30075A026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				7C4FC2DA18CD744F00021056 /* EJCHashTableTests.m */,
 				7C4FC2ED18CEDBAF00021056 /* EJCLinkedListTests.m */,
+				7C88091118D6C669006D4274 /* EJCInterviewQuestionsArrays.m */,
 				7C4FC2CD18CD740F00021056 /* Supporting Files */,
 			);
 			path = EmilyClassTests;
@@ -124,6 +131,15 @@
 				7C4FC2E518CD761A00021056 /* bitmask.c */,
 			);
 			name = Class2;
+			sourceTree = "<group>";
+		};
+		7C88091318D6C67E006D4274 /* Interview Questions */ = {
+			isa = PBXGroup;
+			children = (
+				7C88091618D6C705006D4274 /* EJCArrays.h */,
+				7C88091418D6C6B5006D4274 /* EJCArrays.c */,
+			);
+			name = "Interview Questions";
 			sourceTree = "<group>";
 		};
 		7CB8294918CD6FC30075A026 = {
@@ -159,6 +175,7 @@
 			children = (
 				7C4FC2DC18CD75C600021056 /* Class1 */,
 				7C4FC2DD18CD75CC00021056 /* Class2 */,
+				7C88091318D6C67E006D4274 /* Interview Questions */,
 				7CB8296318CD6FD60075A026 /* Data Structures */,
 				7CB8295818CD6FC30075A026 /* main.m */,
 				7CB8295C18CD6FC30075A026 /* EmilyClass.1 */,
@@ -272,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C88091218D6C669006D4274 /* EJCInterviewQuestionsArrays.m in Sources */,
 				7C4FC2E918CD78D900021056 /* EJCHashTable.c in Sources */,
 				7C4FC2EF18CEDF0900021056 /* EJCLinkedList.c in Sources */,
 				7C4FC2DB18CD744F00021056 /* EJCHashTableTests.m in Sources */,
+				7C88091718D6CBD6006D4274 /* EJCArrays.c in Sources */,
 				7C4FC2EE18CEDBAF00021056 /* EJCLinkedListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +305,7 @@
 				7CB8296A18CD72AF0075A026 /* main.m in Sources */,
 				7CB8296B18CD72B40075A026 /* EJCHashTable.c in Sources */,
 				7C4FC2EB18CEDA2D00021056 /* EJCLinkedList.c in Sources */,
+				7C88091518D6C6B5006D4274 /* EJCArrays.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
