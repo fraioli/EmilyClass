@@ -10,3 +10,6 @@
 
 void reverseString(char *str) {
 }
+
+void replaceSpacesInStringWithPercentTwenty(char *str, int length) {
+}
