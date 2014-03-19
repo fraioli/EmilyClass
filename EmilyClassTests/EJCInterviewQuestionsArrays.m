@@ -40,6 +40,37 @@
     XCTAssert(strcmp(str, rstr) == 0, @"Reverse of OddString should be %s but was %s", rstr, str);
 }
 
+- (void)teststringIsPermutationOfString {
+    char astr[20];
+    char bstr[20];
+    int is;
+    int shouldBe;
+
+    strncpy(astr, "abcdef", 20);
+    strncpy(bstr, "fcbade", 20);
+    shouldBe = 1;
+    is = stringIsPermutationOfString(astr, bstr);
+    XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
+
+    strncpy(astr, "aaaa", 20);
+    strncpy(bstr, "cc", 20);
+    shouldBe = 0;
+    is = stringIsPermutationOfString(astr, bstr);
+    XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
+
+    strncpy(astr, "", 20);
+    strncpy(bstr, "", 20);
+    shouldBe = 1;
+    is = stringIsPermutationOfString(astr, bstr);
+    XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
+
+    strncpy(astr, "aaaabbbbcccc", 20);
+    strncpy(bstr, "bacbacbacbac", 20);
+    shouldBe = 1;
+    is = stringIsPermutationOfString(astr, bstr);
+    XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
+}
+
 - (void)testReplaceSpacesInStringWithPercentTwenty {
     char str[20];
     char ostr[20];

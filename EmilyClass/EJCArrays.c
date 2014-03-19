@@ -11,5 +11,9 @@
 void reverseString(char *str) {
 }
 
+int stringIsPermutationOfString(char *astr, char *bstr) {
+    return 0;
+}
+
 void replaceSpacesInStringWithPercentTwenty(char *str, int length) {
 }
