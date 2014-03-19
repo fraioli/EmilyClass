@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Curly House Inc. All rights reserved.
 //
 
-#include <stdio.h>
+#include <stdlib.h>
 
 void reverseString(char *str) {
 }
@@ -16,4 +16,8 @@ int stringIsPermutationOfString(char *astr, char *bstr) {
 }
 
 void replaceSpacesInStringWithPercentTwenty(char *str, int length) {
+}
+
+char * compressString(char *str) {
+    return NULL;
 }

@@ -101,4 +101,64 @@
     XCTAssert(strcmp(str, sstr) == 0, @"Replacement of '%s' should be '%s' but was '%s'", ostr, sstr, str);
 }
 
+- (void)testCompressString {
+    char str[150];
+    char *rstr;
+    char *sstr;
+    
+    strncpy(str, "", 150);
+    sstr = "";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+    
+    strncpy(str, "aabbaa", 150);
+    sstr = "aabbaa";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+    
+    strncpy(str, "aaa", 150);
+    sstr = "a3";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+    
+    strncpy(str, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 150);
+    sstr = "a121";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+
+    strncpy(str, "abcdeeeeeeeeeee", 150);
+    sstr = "a1b1c1d1e11";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+
+    strncpy(str, "aaaaabcd", 150);
+    sstr = "aaaaabcd";
+    rstr = compressString(str);
+    if (rstr) {
+        XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
+    } else {
+        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+}
+
 @end
