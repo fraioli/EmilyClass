@@ -8,19 +8,19 @@
 
 #include <stdlib.h>
 
-void reverseString(char *str) {
+void EJCArraysReverseString(char *str) {
 }
 
-int stringIsPermutationOfString(char *astr, char *bstr) {
+int EJCArraysStringIsPermutationOfString(char *astr, char *bstr) {
     return 0;
 }
 
-void replaceSpacesInStringWithPercentTwenty(char *str, int length) {
+void EJCArraysReplaceSpacesInStringWithPercentTwenty(char *str, int length) {
 }
 
-char * compressString(char *str) {
+char * EJCArraysCompressString(char *str) {
     return NULL;
 }
 
-void rotateNinetyDegrees(int **matrix, int size) {
+void EJCArraysRotateNinetyDegrees(int **matrix, int size) {
 }

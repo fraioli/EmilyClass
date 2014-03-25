@@ -31,16 +31,16 @@
     
     strncpy(str, "EvenString", 20);
     rstr = "gnirtSnevE";
-    reverseString(str);
+    EJCArraysReverseString(str);
     XCTAssert(strcmp(str, rstr) == 0, @"Reverse of EvenString should be %s but was %s", rstr, str);
 
     strncpy(str, "OddString", 20);
     rstr = "gnirtSddO";
-    reverseString(str);
+    EJCArraysReverseString(str);
     XCTAssert(strcmp(str, rstr) == 0, @"Reverse of OddString should be %s but was %s", rstr, str);
 }
 
-- (void)teststringIsPermutationOfString {
+- (void)testStringIsPermutationOfString {
     char astr[20];
     char bstr[20];
     int is;
@@ -49,25 +49,25 @@
     strncpy(astr, "abcdef", 20);
     strncpy(bstr, "fcbade", 20);
     shouldBe = 1;
-    is = stringIsPermutationOfString(astr, bstr);
+    is = EJCArraysStringIsPermutationOfString(astr, bstr);
     XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
 
     strncpy(astr, "aaaa", 20);
     strncpy(bstr, "cc", 20);
     shouldBe = 0;
-    is = stringIsPermutationOfString(astr, bstr);
+    is = EJCArraysStringIsPermutationOfString(astr, bstr);
     XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
 
     strncpy(astr, "", 20);
     strncpy(bstr, "", 20);
     shouldBe = 1;
-    is = stringIsPermutationOfString(astr, bstr);
+    is = EJCArraysStringIsPermutationOfString(astr, bstr);
     XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
 
     strncpy(astr, "aaaabbbbcccc", 20);
     strncpy(bstr, "bacbacbacbac", 20);
     shouldBe = 1;
-    is = stringIsPermutationOfString(astr, bstr);
+    is = EJCArraysStringIsPermutationOfString(astr, bstr);
     XCTAssert(is == shouldBe, @"Permutation status of '%s' and '%s' should be %d but was %d", astr, bstr, shouldBe, is);
 }
 
@@ -79,25 +79,25 @@
     strncpy(str, "NoSpace", 20);
     strncpy(ostr, "NoSpace", 20);
     sstr = "NoSpace";
-    replaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
+    EJCArraysReplaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
     XCTAssert(strcmp(str, sstr) == 0, @"Replacement of '%s' should be '%s' but was '%s'", ostr, sstr, str);
     
     strncpy(str, "One Space", 20);
     strncpy(ostr, "One Space", 20);
     sstr = "One%20Space";
-    replaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
+    EJCArraysReplaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
     XCTAssert(strcmp(str, sstr) == 0, @"Replacement of '%s' should be '%s' but was '%s'", ostr, sstr, str);
 
     strncpy(str, "      ", 20);
     strncpy(ostr, "      ", 20);
     sstr = "%20%20%20%20%20%20";
-    replaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
+    EJCArraysReplaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
     XCTAssert(strcmp(str, sstr) == 0, @"Replacement of '%s' should be '%s' but was '%s'", ostr, sstr, str);
 
     strncpy(str, "", 20);
     strncpy(ostr, "", 20);
     sstr = "";
-    replaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
+    EJCArraysReplaceSpacesInStringWithPercentTwenty(str, (int)strlen(str));
     XCTAssert(strcmp(str, sstr) == 0, @"Replacement of '%s' should be '%s' but was '%s'", ostr, sstr, str);
 }
 
@@ -108,56 +108,56 @@
     
     strncpy(str, "", 150);
     sstr = "";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
     
     strncpy(str, "aabbaa", 150);
     sstr = "aabbaa";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
     
     strncpy(str, "aaa", 150);
     sstr = "a3";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
     
     strncpy(str, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 150);
     sstr = "a120";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
 
     strncpy(str, "abcdeeeeeeeeeee", 150);
     sstr = "a1b1c1d1e11";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
 
     strncpy(str, "aaaaabcd", 150);
     sstr = "aaaaabcd";
-    rstr = compressString(str);
+    rstr = EJCArraysCompressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
-        XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+        XCTFail(@"String returned from EJCArraysCompressString(\"%s\") was NULL", str);
     }
 }
 
@@ -200,7 +200,7 @@ static void matrixToString(int **matrix, int size, char *str) {
     matrix[0][0] = 1;
     size = 1;
     matrixToString(matrix, size, omstr);
-    rotateNinetyDegrees(matrix, size);
+    EJCArraysRotateNinetyDegrees(matrix, size);
     matrixToString(matrix, size, nmstr);
     cmatrix[0][0] = 1;
     matrixToString(cmatrix, size, cmstr);
@@ -219,7 +219,7 @@ static void matrixToString(int **matrix, int size, char *str) {
     matrix[1][1] = 4;
     size = 2;
     matrixToString(matrix, size, omstr);
-    rotateNinetyDegrees(matrix, size);
+    EJCArraysRotateNinetyDegrees(matrix, size);
     matrixToString(matrix, size, nmstr);
     cmatrix[0][0] = 3;
     cmatrix[0][1] = 1;
@@ -247,7 +247,7 @@ static void matrixToString(int **matrix, int size, char *str) {
     matrix[2][2] = 9;
     size = 3;
     matrixToString(matrix, size, omstr);
-    rotateNinetyDegrees(matrix, size);
+    EJCArraysRotateNinetyDegrees(matrix, size);
     matrixToString(matrix, size, nmstr);
     cmatrix[0][0] = 7;
     cmatrix[0][1] = 4;
