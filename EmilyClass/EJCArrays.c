@@ -21,3 +21,6 @@ void replaceSpacesInStringWithPercentTwenty(char *str, int length) {
 char * compressString(char *str) {
     return NULL;
 }
+
+void rotateNinetyDegrees(int **matrix, int size) {
+}

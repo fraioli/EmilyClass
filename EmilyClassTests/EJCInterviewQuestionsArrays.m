@@ -133,8 +133,8 @@
         XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
     }
     
-    strncpy(str, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 150);
-    sstr = "a121";
+    strncpy(str, "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", 150);
+    sstr = "a120";
     rstr = compressString(str);
     if (rstr) {
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
@@ -158,6 +158,115 @@
         XCTAssert(strcmp(rstr, sstr) == 0, @"Compression of '%s' should be '%s' but was '%s'", str, sstr, rstr);
     } else {
         XCTFail(@"String returned from compressString(\"%s\") was NULL", str);
+    }
+}
+
+static void matrixToString(int **matrix, int size, char *str) {
+    int i, j;
+    size--;
+
+    for (i = 0; i < size; i++) {
+        for (j = 0; j < size; j++) {
+            *str++ = '0' + matrix[i][j];
+            *str++ = ' ';
+        }
+        *str++ = '0' + matrix[i][j];
+        *str++ = '\n';
+    }
+    
+    j = 0;
+    for (; j < size; j++) {
+        *str++ = '0' + matrix[i][j];
+        *str++ = ' ';
+    }
+    *str++ = '0' + matrix[i][j];
+    *str = '\0';
+}
+
+- (void)testRotateNinetyDegrees {
+    int size = 5;
+    char omstr[size * size * 3];
+    char nmstr[size * size * 3];
+    char cmstr[size * size * 3];
+    int *matrix[size];
+    int *cmatrix[size];
+    int values[size * size];
+    int cvalues[size * size];
+    for (int i = 0; i < size; i++) {
+        matrix[i] = values + i * size;
+        cmatrix[i] = cvalues + i * size;
+    }
+    
+    matrix[0][0] = 1;
+    size = 1;
+    matrixToString(matrix, size, omstr);
+    rotateNinetyDegrees(matrix, size);
+    matrixToString(matrix, size, nmstr);
+    cmatrix[0][0] = 1;
+    matrixToString(cmatrix, size, cmstr);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (matrix[i][j] != cmatrix[i][j]) {
+                XCTFail(@"Rotation of\n%s\n should be \n%s\n but was \n%s", omstr, cmstr, nmstr);
+                break;
+            }
+        }
+    }
+    
+    matrix[0][0] = 1;
+    matrix[0][1] = 2;
+    matrix[1][0] = 3;
+    matrix[1][1] = 4;
+    size = 2;
+    matrixToString(matrix, size, omstr);
+    rotateNinetyDegrees(matrix, size);
+    matrixToString(matrix, size, nmstr);
+    cmatrix[0][0] = 3;
+    cmatrix[0][1] = 1;
+    cmatrix[1][0] = 4;
+    cmatrix[1][1] = 2;
+    matrixToString(cmatrix, size, cmstr);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (matrix[i][j] != cmatrix[i][j]) {
+                XCTFail(@"Rotation of\n%s\n should be \n%s\n but was \n%s", omstr, cmstr, nmstr);
+                i = size;
+                break;
+            }
+        }
+    }
+
+    matrix[0][0] = 1;
+    matrix[0][1] = 2;
+    matrix[0][2] = 3;
+    matrix[1][0] = 4;
+    matrix[1][1] = 5;
+    matrix[1][2] = 6;
+    matrix[2][0] = 7;
+    matrix[2][1] = 8;
+    matrix[2][2] = 9;
+    size = 3;
+    matrixToString(matrix, size, omstr);
+    rotateNinetyDegrees(matrix, size);
+    matrixToString(matrix, size, nmstr);
+    cmatrix[0][0] = 7;
+    cmatrix[0][1] = 4;
+    cmatrix[0][2] = 1;
+    cmatrix[1][0] = 8;
+    cmatrix[1][1] = 5;
+    cmatrix[1][2] = 2;
+    cmatrix[2][0] = 9;
+    cmatrix[2][1] = 6;
+    cmatrix[2][2] = 3;
+    matrixToString(cmatrix, size, cmstr);
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (matrix[i][j] != cmatrix[i][j]) {
+                XCTFail(@"Rotation of\n%s\n should be \n%s\n but was \n%s", omstr, cmstr, nmstr);
+                i = size;
+                break;
+            }
+        }
     }
 }
 
